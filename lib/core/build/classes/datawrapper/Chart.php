@@ -208,8 +208,8 @@ class Chart extends BaseChart {
                 'number-unit' => ''
             ),
             'publish' => array(
-                'embed-width' => 600,
-                'embed-height' => 400
+                'embed-width' => 700,
+                'embed-height' => 394
             )
         );
     }
