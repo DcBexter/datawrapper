@@ -3,5 +3,6 @@
     "link": "http://bootswatch.com/slate/",
     "restricted": null,
     "locale": "de_DE",
-    "version": "0.9.1"
+    "version": "0.9.1",
+    "restrict": "@dev-test.dw.de"
 }
