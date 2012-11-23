@@ -667,6 +667,11 @@ h1, h2, h3, h4, h5, h6 {
   border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+.form-error{
+    background: red;
+    font-weight: bold;
+}
+
 .form-actions {
     background: #F2F2F2 url(../img/bg-well.png);
     border-radius: 0 0 10px 10px;
