@@ -113,6 +113,13 @@ $(function() {
   Datawrapper.Core.initialize();
 });
     </script>
+    {% if user.role == 'guest' %}
+    <script type="text/javascript">
+        $(function() {
+            $('#dwLoginForm').modal();
+        });
+    </script>
+    {% endif %}
     {% use "messages.twig" %}
     {{ block('messages') }}
 
