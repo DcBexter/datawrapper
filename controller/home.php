@@ -19,7 +19,8 @@ $app->get('/', function () use ($app) {
 
         $res = $app->response();
         $res['Cache-Control'] = 'max-age=0';
-        $app->render('home.twig', $page);
+        //$app->render('home.twig', $page);
+        $app->redirect('/chart/create');
     }
 });
 
