@@ -58,3 +58,11 @@ foreach ($urls as $url) {
 $app->get('/docs/?', function() use ($app) {
     $app->redirect('/docs/about');
 });
+
+$app->get('/docs/tutorial/', function() use ($app) {
+    $page = array(
+        'title' => 'Tutorial'
+    );
+    add_header_vars($page, '');
+    $app->render('docs-tutorial.twig', $page);
+});
