@@ -44,7 +44,7 @@ body.chart {
 }
 
 #footer {
-    margin-top:10px;
+    margin: 10px 0 5px;
     position:absolute;
     bottom:0px;
     left:0px;
@@ -59,9 +59,11 @@ body.chart {
 }
 .footer-left {
     float: left;
+    margin-left:5px;
 }
 .footer-right {
     float: right;
+    margin-right:5px;
 }
 #footer a{
     text-decoration:none;
@@ -133,7 +135,7 @@ svg .axis, svg .tick, svg .grid, svg rect {
 }
 
 @media screen and (max-width: 400px) {
-    h1, #footer, p, .label {
+    #intro, #header, #widget-header, h1, #footer, p, .label {
         display: none;
         position: absolute;
         height: 0;
@@ -151,10 +153,6 @@ svg .axis, svg .tick, svg .grid, svg rect {
 
     .widget-body {
         padding: 0;
-    }
-
-    #header {
-        display: none;
     }
 }
 
