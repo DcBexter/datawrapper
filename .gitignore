@@ -13,3 +13,4 @@ config.yaml
 scripts/history.php
 
 *.log
+/nbproject/private/

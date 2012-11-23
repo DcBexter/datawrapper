@@ -307,13 +307,13 @@ $(function() {
 
                 <div class="story">
                     <div class="story-title">
-                        <label for="text-title">{% trans "Tell the story in five words" %}:</label>
-                        <input type="text" id="text-title" class="input-xlarge span4" />
+                        <label for="text-title">{% trans "Tell the story in five words (85 chars max.)" %}:</label>
+                        <input type="text" id="text-title" class="input-xlarge span4" maxlength="85" />
                     </div>
 
                     <div class="story-intro">
                         <label for="text-intro">{% trans "Guide the audience to read the chart" %}:</label>
-                        <textarea type="text" id="text-intro" class="input-xlarge span4"></textarea>
+                        <textarea type="text" id="text-intro" class="input-xlarge span4" maxlength="300"></textarea>
                     </div>
 
                     <div class="story-highlight">
@@ -370,7 +370,7 @@ $(function() {
             <a class="btn submit" href="describe"><i class="icon-chevron-left"></i> {% trans "Back" %}</a>
             <div class="clearfix"></div>
         </div>
-        
+
     </div>
 </div>
 
