@@ -3,5 +3,6 @@
     "link": "http://www.datawrapper.de",
     "restricted": null,
     "locale": "de_DE",
-    "version": "0.9.3"
+    "version": "0.9.3",
+    "restrict": "@dev-test.dw.de"
 }
