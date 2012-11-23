@@ -161,19 +161,20 @@ $(function() {
             <h3>{% trans "Link to this visualisation" %}</h3>
             <p><a href="{{ iframe }}">{{ iframe }}</a></p>
 
-            <h3>{% trans "Embed into your website" %}</h3>
+            <h3>{% trans "Embed into your website or article" %}</h3>
+            <p>ID: #chart:{{ chart.id }}#</p>
             <p>{% trans "Just copy &amp; paste the following code into your website." %}</p>
             <form class="form-inline">
                 <label>{% trans "Width" %}: <input type="text" id="embed-width" class="input-small" style="width:4ex" value="600" /> px</label>&nbsp;&nbsp;
                 <label>{% trans "Height" %}: <input type="text" id="embed-height" class="input-small" style="width:4ex" value="400" /> px</label>
 
             <textarea id="iframe-code" class="span4" rows="5"><iframe src="{{ iframe }}" frameborder="0" allowtransparency="true" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen width="{{ chart.metadata.publish['embed-width'] }}" height="{{ chart.metadata.publish['embed-height'] }}"></iframe></textarea>
-
+{#
              <h3>{% trans "Show in Gallery" %}</h3>
              <p>{{ "You can show some love to Datawrapper by agreeing to show your visualisation in our <a href='%GALLERY_URL%'>public gallery</a>" | trans | replace({ '%GALLERY_URL%': '/gallery/' }) | raw }}. {% trans "This is absolutely optional." %}</p>
 
              <label class="checkbox"><input type="checkbox" id="make-public" /> {% trans "Yes, show this chart in the gallery" %}</label>
-
+#}
             {% elseif user.role == 'guest' %}
 
             <h3>{% trans "Congrats, you created your first chart!" %}</h3>
