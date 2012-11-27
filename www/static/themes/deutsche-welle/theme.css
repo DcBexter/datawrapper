@@ -24,10 +24,13 @@ body.chart {
     font: 17px/30px normal Georgia,serif;
     padding-left: 20px;
     margin: 0;
+    overflow:hidden;
 }
 #intro p{
     margin-bottom:10px!important;
     padding:0 10px!important;
+    max-height:54px!important;
+    overflow:hidden;
 }
 #header{
     padding-top:10px;
@@ -171,4 +174,32 @@ svg .axis, svg .tick, svg .grid, svg rect {
 .legend {
     position: relative;
     top: -10px;
+}
+#translucent_cover
+{
+    position: absolute;
+    display:block;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #000;
+    opacity:.80;
+}
+
+#top_block
+{
+    margin:0;
+    position: absolute;
+    display:block;
+    min-width: 350px;
+    z-index: 1001;
+    background: #fff;
+    left: 50%;
+    top: 50%;
+    border-radius: 10px 10px;
+    box-shadow: 0px 0px 7px 10px #fff;
+}
+#popbutton {
+    max-height:30px;
 }

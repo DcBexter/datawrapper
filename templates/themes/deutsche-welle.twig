@@ -23,7 +23,7 @@
                 {% endif %}
                 |
                 {% endif %}
-                <a href="{{ DW_DOMAIN }}/chart/{{ chart.id }}/data">{% trans "Download data" %}</a>
+                <a href="{{ DW_DOMAIN }}/charts/{{ chart.id }}/data">{% trans "Download data" %}</a> | <a href="#" onclick="pop()">{% trans "Embed into your website" %}</a>
             </div>
             <div class="footer-right">
                 <a href="//dw.de" target="_blank">&copy; Deutsche Welle</a>
@@ -33,3 +33,45 @@
 {% else %}
         <div style="height:1px"></div>
 {% endif %}
+        <div id="translucent_cover" style="visibility: hidden; height: 0px;">
+        </div>
+        <div id="top_block" class="pop" style="visibility: hidden; height: 0px;">
+            <textarea id="iframe-code" class="pop" rows="6" style="width:100%"><iframe src="http://{{ DW_CHART_CACHE_DOMAIN }}/{{ chart.id }}" frameborder="0" allowtransparency="true" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen width="700" height="394"></iframe></textarea>
+            <div class="pop" align="right">
+                <input onclick="close_pop()" type="button" id="popbutton" class="pop" value="Close" />
+            </div>
+        </div>
+        <script type="text/javascript">
+        close_pop();
+        function close_pop()
+        {
+            document.getElementById("translucent_cover").style.visibility='hidden';
+            document.getElementById("translucent_cover").style.height='0px';
+            document.getElementById("top_block").style.visibility='hidden';
+            document.getElementById("top_block").style.marginLeft='0px';
+            document.getElementById("top_block").style.marginTop='0px';
+            document.getElementById("top_block").style.padding='0px';
+            document.getElementById("iframe-code").rows='0';
+            document.getElementById("iframe-code").style.height='0px';
+            document.getElementsByClassName("pop")[0].style.height='0px';
+            document.getElementsByClassName("pop")[1].style.height='0px';
+            document.getElementsByClassName("pop")[2].style.height='0px';
+            document.getElementsByClassName("pop")[3].style.height='0px';
+
+        }
+
+        function pop()
+        {
+            document.getElementById("translucent_cover").style.visibility='visible';
+            document.getElementById("translucent_cover").style.height='100%';
+            document.getElementById("top_block").style.visibility='visible';
+            document.getElementById("top_block").style.marginLeft='-150px';
+            document.getElementById("top_block").style.marginTop='-100px';
+            document.getElementById("top_block").style.padding='15px';
+            document.getElementById("iframe-code").rows='6';
+            document.getElementsByClassName("pop")[0].style.height='125px';
+            document.getElementsByClassName("pop")[1].style.height='100px';
+            document.getElementsByClassName("pop")[2].style.height='100px';
+            document.getElementsByClassName("pop")[3].style.height='100px';
+        }
+        </script>
