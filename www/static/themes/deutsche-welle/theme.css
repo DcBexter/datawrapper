@@ -137,8 +137,8 @@ svg .axis, svg .tick, svg .grid, svg rect {
     shape-rendering: crispEdges;
 }
 
-@media screen and (max-width: 400px) {
-    #intro, #header, #widget-header, h1, #footer, p, .label {
+@media screen and (max-width: 601px) {
+    #intro, #header, #widget-header, h1, #footer, p, .label, .pop, #translucent_cover {
         display: none;
         position: absolute;
         height: 0;
