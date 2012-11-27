@@ -83,6 +83,7 @@
                     $.ajax({
                         url: opts.url,
                         method: 'GET',
+                        dataType: "text",
                         success: function(raw) {
                             me._delimtedLoaded(raw);
                             if (_.isFunction(callbacks.success)) {
