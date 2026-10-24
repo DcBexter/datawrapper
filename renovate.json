@@ -1,0 +1,23 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended",
+    "helpers:pinGitHubActionDigests"
+  ],
+  "enabledManagers": [
+    "github-actions",
+    "npm",
+    "composer"
+  ],
+  "minimumReleaseAge": "3 days",
+  "prConcurrentLimit": 3,
+  "automerge": true,
+  "ignorePaths": [
+    "**/node_modules/**",
+    "**/bower_components/**"
+  ],
+  "dependencyDashboard": true,
+  "automergeType": "pr",
+  "platformAutomerge": true,
+  "ignoreTests": false
+}
