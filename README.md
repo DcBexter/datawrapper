@@ -17,6 +17,6 @@ PRs, pushes to `live` and weekly runs validate GitHub workflows, JavaScript synt
 
 The PHP 5-era backend and vendored libraries are preserved. Current PHP compatibility is not claimed: PHP 8.5 syntax checks already fail on existing curly-brace string offsets in `ChartQuery.php` and several legacy libraries. Do not deploy this snapshot without a separate modernization/security review.
 
-Renovate proposes CI and declared npm/Composer dependency updates, including preserved manifests under vendor/. Only GitHub Action digest refreshes may auto-merge after **Required maintenance** passes; version changes and runtime dependency upgrades need review. Dependabot handles available security updates, with version-update PRs delegated to Renovate. Vendored libraries without supported manifests cannot be updated automatically.
+Renovate proposes CI and declared npm/Composer dependency updates, including preserved manifests under vendor/. All declared dependency updates, including major and security updates, may auto-merge after **Required maintenance** and **CodeQL** pass. These are static checks; they do not prove runtime compatibility. Dependabot handles available security updates, with version-update PRs delegated to Renovate. Vendored libraries without supported manifests cannot be updated automatically.
 
 No automatic application release or deployment. Scheduled workflow and bot configuration become effective after merge to `live`.
