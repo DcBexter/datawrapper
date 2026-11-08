@@ -22,7 +22,7 @@
   "main": "d3.js",
   "dependencies": {
     "uglify-js": "3.19.3",
-    "jsdom": "30.1.3",
+    "jsdom": "31.0.0",
     "vows": "0.8.3"
   }
 }
